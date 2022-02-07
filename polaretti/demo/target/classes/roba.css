@@ -1,0 +1,15 @@
+body{
+    text-align: center;
+    image-rendering: auto;
+    background-color: black;
+}
+h2{
+    color:gold;
+}
+h1{
+    color: white;
+}
+p{
+    color: chartreuse;
+}
+
