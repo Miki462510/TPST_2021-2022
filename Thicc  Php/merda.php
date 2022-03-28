@@ -20,7 +20,17 @@
  switch($_SERVER['REQUEST_METHOD']){
 
      case 'GET':
-         echo '$data';
+         $sql = "SELECT ";
+$result = mysqli_query($conn, $sql);
+
+if (mysqli_num_rows($result) > 0) {
+  // output data of each row
+  while($row = mysqli_fetch_assoc($result)) {
+    echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
+  }
+} else {
+   echo '$data';
+}
      break;
 
      case 'POST':
